@@ -35,6 +35,12 @@ int _printf(const char* format, ...)
 		    number_of_characters_printed += _puts(va_arg(all_parameters, char *));
 		    format_position += 2;
 	    }
+	    else if (format[format_position + 1] == '%')
+	    {
+		    _putchar('%');
+		    number_of_characters_printed++;
+		    format_position += 2;
+	    }
             else
             {
                 _putchar(format[format_position]);
