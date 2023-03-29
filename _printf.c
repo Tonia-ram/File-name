@@ -17,17 +17,11 @@ int process_flag(char specifier, va_list all_parameters)
 
 	number_of_characters_printed = 0;
 	if (specifier == 'c')
-	{
 		number_of_characters_printed += _putchar(va_arg(all_parameters, int));
-	}
 	else if (specifier == 's')
-	{
 		number_of_characters_printed += _puts(va_arg(all_parameters, char *));
-	}
 	else if (specifier == '%')
-	{
 		number_of_characters_printed += _putchar('%');
-	}
 
 	return (number_of_characters_printed);
 }
@@ -71,10 +65,8 @@ int _printf(const char *format, ...)
 	while (format[format_position] != '\0')
 	{
 		if (format[format_position] == '%' && format[format_position + 1] != '\0')
-		{
 			number_of_characters_printed += process_flag(format[format_position + 1],
 					all_parameters);
-		}
 		if (!is_flag(format[format_position], format[format_position + 1]))
 		{
 			number_of_characters_printed += _putchar(format[format_position]);
