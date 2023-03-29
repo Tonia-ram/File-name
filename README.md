@@ -5,6 +5,7 @@
 - c flag
 - s flag
 - % flag
+- d or i flag
 
 ```
 alex@ubuntu:~/c/printf$ cat main.c
